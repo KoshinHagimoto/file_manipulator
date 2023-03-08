@@ -13,6 +13,7 @@ def validate_inputpath(inputpath):
     f.close()
 
 def reverse(inputpath, outputpath):
+    # reverse contents
     contents = ''
     with open(inputpath) as f:
         contents = f.read()
@@ -20,6 +21,7 @@ def reverse(inputpath, outputpath):
         f.write(contents[::-1])
 
 def copy(inputpath, outputpath):
+    # copy contents
     contents = ''
     with open(inputpath) as f:
         contents = f.read()
@@ -27,6 +29,7 @@ def copy(inputpath, outputpath):
         f.write(contents)
 
 def duplicate(inputpath, n):
+    # duplicate contents n times
     contents = ''
     with open(inputpath) as f:
         contents = f.read()
@@ -35,6 +38,7 @@ def duplicate(inputpath, n):
             f.write(contents + '\n')
 
 def replace(inputpath, needle, newstring):
+    # search needle and replace newstring
     contents = ''
     with open(inputpath) as f:
         contents = f.read()
